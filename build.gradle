@@ -1,0 +1,21 @@
+group 'masonwan'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile gradleApi()
+  compile 'org.codehaus.groovy:groovy-all:2.4.11'
+
+  testCompile group: 'org.spockframework', name: 'spock-core', version: '+'
+  testCompile group: 'cglib', name: 'cglib-nodep', version: '+'
+  testCompile 'org.powermock:powermock-api-mockito2:+'
+  testCompile 'org.powermock:powermock-module-junit4:+'
+  testCompile 'org.powermock:powermock-module-junit4-rule:+'
+  testCompile 'org.powermock:powermock-classloading-xstream:+'
+  testCompile 'org.assertj:assertj-core:+'
+}
